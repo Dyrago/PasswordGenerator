@@ -61,12 +61,10 @@ namespace PasswordGenerator
                         haveOneDigit = true;
                     if (!specialChars || _specialChars.ToArray().Any(z => z == password[i]))
                         haveOneSpecial = true;
-                }
 
-                if (haveOneLower && haveOneUpper && haveOneDigit && haveOneSpecial)
-                    return true;
-                else
-                    return false;
+                    if (haveOneLower && haveOneUpper && haveOneDigit && haveOneSpecial)
+                        return true;
+                }
             }
 
             return false;
